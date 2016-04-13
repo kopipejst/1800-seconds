@@ -12,6 +12,9 @@
 		26B6F3931CBDC28800CDE525 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B6F3911CBDC28800CDE525 /* MainMenu.xib */; };
 		26B6F39E1CBDC28900CDE525 /* _800_secondsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B6F39D1CBDC28900CDE525 /* _800_secondsTests.swift */; };
 		26B6F3A91CBDC28900CDE525 /* _800_secondsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B6F3A81CBDC28900CDE525 /* _800_secondsUITests.swift */; };
+		26B6F3B71CBDC2F000CDE525 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B6F3B61CBDC2F000CDE525 /* EventMonitor.swift */; };
+		26B6F3BA1CBDC31F00CDE525 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B6F3B81CBDC31F00CDE525 /* SettingsViewController.swift */; };
+		26B6F3BB1CBDC31F00CDE525 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B6F3B91CBDC31F00CDE525 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		26B6F3A41CBDC28900CDE525 /* 1800 secondsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "1800 secondsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B6F3A81CBDC28900CDE525 /* _800_secondsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _800_secondsUITests.swift; sourceTree = "<group>"; };
 		26B6F3AA1CBDC28900CDE525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B6F3B61CBDC2F000CDE525 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		26B6F3B81CBDC31F00CDE525 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		26B6F3B91CBDC31F00CDE525 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				26B6F38D1CBDC28800CDE525 /* AppDelegate.swift */,
+				26B6F3B61CBDC2F000CDE525 /* EventMonitor.swift */,
+				26B6F3B81CBDC31F00CDE525 /* SettingsViewController.swift */,
+				26B6F3B91CBDC31F00CDE525 /* SettingsViewController.xib */,
 				26B6F38F1CBDC28800CDE525 /* Assets.xcassets */,
 				26B6F3911CBDC28800CDE525 /* MainMenu.xib */,
 				26B6F3941CBDC28800CDE525 /* Info.plist */,
@@ -224,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26B6F3901CBDC28800CDE525 /* Assets.xcassets in Resources */,
+				26B6F3BB1CBDC31F00CDE525 /* SettingsViewController.xib in Resources */,
 				26B6F3931CBDC28800CDE525 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				26B6F38E1CBDC28800CDE525 /* AppDelegate.swift in Sources */,
+				26B6F3B71CBDC2F000CDE525 /* EventMonitor.swift in Sources */,
+				26B6F3BA1CBDC31F00CDE525 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +395,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "1800 seconds/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "rs.workshop.-800-seconds";
+				PRODUCT_BUNDLE_IDENTIFIER = "rs.workshop.1800-seconds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -395,7 +407,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "1800 seconds/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "rs.workshop.-800-seconds";
+				PRODUCT_BUNDLE_IDENTIFIER = "rs.workshop.1800-seconds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
