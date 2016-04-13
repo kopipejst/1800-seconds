@@ -6,6 +6,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SettingsViewController" customModule="_800_seconds" customModuleProvider="target">
             <connections>
+                <outlet property="btnPause" destination="wGs-63-pKL" id="mX1-Ma-OzV"/>
+                <outlet property="btnStart" destination="hrA-Gq-DiU" id="WNe-FE-vLS"/>
+                <outlet property="btnStop" destination="76e-UF-OZ1" id="tPk-K7-OeB"/>
                 <outlet property="txtTime" destination="3f3-Be-b0R" id="cNV-6O-xwA"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -13,65 +16,90 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="291"/>
+            <rect key="frame" x="0.0" y="0.0" width="186" height="168"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3f3-Be-b0R">
-                    <rect key="frame" x="20" y="122" width="110" height="22"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="1800" drawsBackground="YES" id="TNM-4c-U1K">
-                        <font key="font" metaFont="system"/>
+                <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3f3-Be-b0R">
+                    <rect key="frame" x="44" y="71" width="74" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" focusRingType="none" placeholderString="00:30:00" drawsBackground="YES" id="TNM-4c-U1K">
+                        <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ihl-EE-F7s">
-                    <rect key="frame" x="18" y="148" width="111" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Time in seconds" id="fA8-Em-RZC">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpw-2K-VQk">
-                    <rect key="frame" x="14" y="88" width="122" height="32"/>
-                    <buttonCell key="cell" type="push" title="Save changes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hq4-vz-6C6">
+                    <rect key="frame" x="126" y="71" width="50" height="22"/>
+                    <buttonCell key="cell" type="smallSquare" title="Save" bezelStyle="smallSquare" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="hq4-vz-6C6">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                     </buttonCell>
                     <connections>
                         <action selector="btnChange:" target="-2" id="qIT-cM-PnO"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYj-yl-kcn">
-                    <rect key="frame" x="20" y="172" width="110" height="110"/>
+                    <rect key="frame" x="10" y="106" width="50" height="50"/>
                     <buttonCell key="cell" type="smallSquare" title="↻" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="G23-1U-JRJ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" size="53" name=".HelveticaNeueDeskInterface-Regular"/>
+                        <font key="font" size="25" name=".HelveticaNeueDeskInterface-Regular"/>
                     </buttonCell>
                     <connections>
                         <action selector="btnReload:" target="-2" id="CtJ-6g-39W"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EkG-YN-ij3">
-                    <rect key="frame" x="-2" y="0.0" width="154" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="© 2016 | 1800 seconds " id="EKi-tE-dnJ">
-                        <font key="font" size="10" name=".HelveticaNeueDeskInterface-Regular"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-iH-5NG">
-                    <rect key="frame" x="20" y="33" width="110" height="19"/>
-                    <buttonCell key="cell" type="roundRect" title="Quit" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fWK-W3-EVF">
+                    <rect key="frame" x="139" y="6" width="37" height="16"/>
+                    <buttonCell key="cell" type="inline" title="Quit" bezelStyle="inline" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="fWK-W3-EVF">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
+                        <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
                     </buttonCell>
                     <connections>
                         <action selector="quit:" target="-2" id="Dd1-t3-7nu"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hrA-Gq-DiU">
+                    <rect key="frame" x="126" y="106" width="50" height="50"/>
+                    <buttonCell key="cell" type="smallSquare" title="►" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Mz-ja-jXZ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="16" name=".HelveticaNeueDeskInterface-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnStart:" target="-2" id="EKW-cD-orf"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="76e-UF-OZ1">
+                    <rect key="frame" x="68" y="106" width="50" height="50"/>
+                    <buttonCell key="cell" type="smallSquare" title="◼︎" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eeh-gl-RNs">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="16" name=".HelveticaNeueDeskInterface-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnStopTimer:" target="-2" id="N20-tC-hIK"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wGs-63-pKL">
+                    <rect key="frame" x="126" y="106" width="50" height="50"/>
+                    <buttonCell key="cell" type="smallSquare" title="❙❙" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fOm-Nn-LqL">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="16" name=".HelveticaNeueDeskInterface-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnPause:" target="-2" id="BIA-87-Ih3"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ihl-EE-F7s">
+                    <rect key="frame" x="8" y="73" width="30" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Time" id="fA8-Em-RZC">
+                        <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
-            <point key="canvasLocation" x="366" y="719.5"/>
+            <point key="canvasLocation" x="384" y="658"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>

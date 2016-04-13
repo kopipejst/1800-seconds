@@ -15,6 +15,7 @@
 		26B6F3B71CBDC2F000CDE525 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B6F3B61CBDC2F000CDE525 /* EventMonitor.swift */; };
 		26B6F3BA1CBDC31F00CDE525 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B6F3B81CBDC31F00CDE525 /* SettingsViewController.swift */; };
 		26B6F3BB1CBDC31F00CDE525 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B6F3B91CBDC31F00CDE525 /* SettingsViewController.xib */; };
+		26B6F3BD1CBEB8A500CDE525 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B6F3BC1CBEB8A500CDE525 /* Controls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		26B6F3B61CBDC2F000CDE525 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		26B6F3B81CBDC31F00CDE525 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		26B6F3B91CBDC31F00CDE525 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		26B6F3BC1CBEB8A500CDE525 /* Controls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				26B6F38F1CBDC28800CDE525 /* Assets.xcassets */,
 				26B6F3911CBDC28800CDE525 /* MainMenu.xib */,
 				26B6F3941CBDC28800CDE525 /* Info.plist */,
+				26B6F3BC1CBEB8A500CDE525 /* Controls.swift */,
 			);
 			path = "1800 seconds";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26B6F38E1CBDC28800CDE525 /* AppDelegate.swift in Sources */,
+				26B6F3BD1CBEB8A500CDE525 /* Controls.swift in Sources */,
 				26B6F3B71CBDC2F000CDE525 /* EventMonitor.swift in Sources */,
 				26B6F3BA1CBDC31F00CDE525 /* SettingsViewController.swift in Sources */,
 			);

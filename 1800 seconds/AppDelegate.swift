@@ -9,16 +9,15 @@
 import Cocoa
 
 var count = 0
+var timer: NSTimer?
+var statusBar = NSStatusBar.systemStatusBar()
+var statusBarItem : NSStatusItem = NSStatusItem()
+let defaults = NSUserDefaults.standardUserDefaults()
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     let popover = NSPopover()
-    let defaults = NSUserDefaults.standardUserDefaults()
-    
-    var statusBar = NSStatusBar.systemStatusBar()
-    var statusBarItem : NSStatusItem = NSStatusItem()
-    
     var eventMonitor: EventMonitor?
     
     override func awakeFromNib() {
@@ -34,7 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         popover.contentViewController = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
         
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        let c = Controls()
+        c.startTimer()
+        
         if (defaults.integerForKey("count") == 0) {
             defaults.setInteger(1800, forKey: "count")
             defaults.setValue("Take a break !", forKey: "message")
@@ -53,33 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
-    
-    func update() {
-        if (count > 0) {
-            let (h,m,s) = secondsToHoursMinutesSeconds(count--)
-            var t = NSString(format: "%02d:%02d", m, s) as String
-            if (h > 0) {
-                t = NSString(format: "%02d:%02d:%02d", h, m, s) as String
-            }
-            statusBarItem.title = t
-        } else {
-            showNotification()
-            count = defaults.integerForKey("count")
-        }
-    }
-    
-    func showNotification() -> Void {
-        let notification = NSUserNotification()
-        notification.title = "1800 seconds"
-        notification.informativeText = "Take a break !"
-        notification.soundName = NSUserNotificationDefaultSoundName
-        NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
-    }
-    
-    func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
-        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
-    }
-    
+        
     func showPopover(sender: AnyObject?) {
         if let button = statusBarItem.button {
             popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
