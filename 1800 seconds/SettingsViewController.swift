@@ -48,6 +48,10 @@ class SettingsViewController: NSViewController {
         btnPause.hidden = false
     }
     
+    @IBAction func btnAbout(sender: AnyObject) {
+        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "http://workshop.rs")!)
+    }
+    
     @IBAction func btnChange(sender: AnyObject) {
         let v = c.timeToSeconds(txtTime.stringValue)
         defaults.setInteger(v, forKey: "count")
